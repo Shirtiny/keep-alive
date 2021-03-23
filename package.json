@@ -1,0 +1,16 @@
+{
+  "name": "keep-alive",
+  "version": "1.0.0",
+  "main": "main.js",
+  "repository": "https://github.com/Shirtiny/keep-alive.git",
+  "author": "shirtiny",
+  "license": "mit",
+  "private": false,
+  "scripts": {
+    "build": "esbuild ./src/index.js --bundle --minify --platform=node --target=node10.4 --outfile=main.js"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "esbuild": "^0.9.6"
+  }
+}
