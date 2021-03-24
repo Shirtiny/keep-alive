@@ -1,9 +1,12 @@
 import axios from "axios";
 
+const pingUrl = process.env.PING_URL;
+
 async function ping() {
-  const res = await axios.get(
-    "https://service-me8o3m26-1258810270.hk.apigw.tencentcs.com/release/shManager/v1/ping"
-  );
+  if(!pingUrl) {
+    throw new Error("ping url为空")
+  }
+  const res = await axios.get(pingUrl);
   return res.data || {};
 }
 

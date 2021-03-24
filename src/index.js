@@ -1,5 +1,3 @@
-import api from "./api";
+import service from "./service";
 
-api.ping().then((data) => {
-  console.log("ping的结果：", data);
-});
+service.ping();
