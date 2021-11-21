@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@shirtiny/utils@^0.0.28":
-  version "0.0.28"
-  resolved "https://registry.npmjs.org/@shirtiny/utils/-/utils-0.0.28.tgz#29cf6fc19d1a979c5f85022810a5bd48f658a73e"
-  integrity sha512-HF4I2sYfMfoTkrXHP3VLIUr229nxQyg1hrxGhEdC3YaeL8OAZBMJ54SnT3LcSWxC2GFPH9KMbhpl4Vb7sasqtw==
+"@shirtiny/utils@^0.0.29":
+  version "0.0.29"
+  resolved "https://registry.npmjs.org/@shirtiny/utils/-/utils-0.0.29.tgz#5f759c419abdc75138383bbba586b76ed1b3247f"
+  integrity sha512-OIfzPX4ulfj+FJ0E8bsFrT1USpHyFZkqdNPCqi0wh7xKeZvpQTutZmY6562JAYWZ96BOeqpUt/1eCTj3U+wLsg==
   dependencies:
     date-fns "^2.25.0"
     rxjs "^7.3.0"

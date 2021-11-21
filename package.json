@@ -10,7 +10,7 @@
     "build": "esbuild ./src/index.js --bundle --minify --platform=node --target=node10.4 --outfile=main.js"
   },
   "dependencies": {
-    "@shirtiny/utils": "^0.0.28",
+    "@shirtiny/utils": "^0.0.29",
     "axios": "^0.21.1",
     "esbuild": "^0.9.6"
   }
