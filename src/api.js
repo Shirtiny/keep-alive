@@ -1,8 +1,15 @@
+/*
+ * @Author: Shirtiny
+ * @Date: 2021-11-14 21:55:39
+ * @LastEditTime: 2021-11-21 19:13:43
+ * @Description: 
+ */
 import axios from "axios";
 
 const pingUrl = process.env.PING_URL;
 
 async function ping() {
+  console.log("ping start");
   if(!pingUrl) {
     throw new Error("ping url为空")
   }
