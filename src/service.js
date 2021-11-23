@@ -4,11 +4,12 @@
  * @LastEditTime: 2021-11-21 19:12:15
  * @Description:
  */
-import { reactiveX } from "@shirtiny/utils/lib";
+import { reactiveX, date } from "@shirtiny/utils/lib";
 import api from "./api";
 
 async function ping() {
   const request = async () => {
+    console.log("发送请求", date.formatTime(date.unix()));
     const data = await api.ping();
     console.log("ping 的结果：", data);
     if (!data) throw new Error("ping 没有获取到结果");
