@@ -10,7 +10,7 @@ const pingUrl = process.env.PING_URL;
 const loginUrl = process.env.LOGIN_URL;
 
 async function ping() {
-  console.log("ping start");
+  console.log("ping start", pingUrl);
   if (!pingUrl) {
     throw new Error("ping url为空")
   }
@@ -19,7 +19,7 @@ async function ping() {
 }
 
 async function login() {
-  console.log("login start");
+  console.log("login start", loginUrl);
   if (!loginUrl) {
     throw new Error("login url为空")
   }
