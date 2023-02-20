@@ -6,6 +6,8 @@
  */
 import axios from "axios";
 
+console.log("env:",process.env)
+
 const pingUrl = process.env.PING_URL;
 const loginUrl = process.env.LOGIN_URL;
 
