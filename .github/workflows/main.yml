@@ -39,7 +39,9 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run Work
         env:
-          PING_URL: ${{ secrets.PING_URL }}
+          # PING_URL: ${{ secrets.PING_URL }}
+          PING_URL: ${{ vars.PING_URL }}
+          LOGIN_URL: ${{ vars.LOGIN_URL }}
         run: |
           npm i yarn
           yarn
