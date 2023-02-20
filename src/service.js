@@ -13,6 +13,9 @@ async function ping() {
     const data = await api.ping();
     console.log("ping 的结果：", data);
     if (!data) throw new Error("ping 没有获取到结果");
+    const user = await api.login();
+    console.log("login 的结果：", user);
+    if (!user) throw new Error("login 没有获取到结果");
   };
 
   const task = reactiveX.createRetryTask({
