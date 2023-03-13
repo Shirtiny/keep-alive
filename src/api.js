@@ -26,7 +26,7 @@ async function login() {
     throw new Error("login url为空")
   }
   const res = await axios.post(loginUrl, {
-    "name": "shirtiny",
+    "name": "keep-alive",
     "password": "123456"
   });
   return res.data || {};
