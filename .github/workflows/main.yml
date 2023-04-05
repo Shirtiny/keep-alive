@@ -41,7 +41,7 @@ jobs:
         env:
           # PING_URL: ${{ secrets.PING_URL }}
           PING_URL: https://manager.shirtiny.cn/api/v1/ping
-          LOGIN_URL: https://manager.shirtiny.cn/api/v1/user/login
+          POST_URL: https://manager.shirtiny.cn/api/v1/corn/daily
         run: |
           npm i yarn
           yarn

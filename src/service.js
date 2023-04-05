@@ -5,17 +5,28 @@
  * @Description:
  */
 import { reactiveX, date } from "@shirtiny/utils/lib";
-import api from "./api";
+import axios from "axios";
 
-async function ping() {
+console.log("env:", process.env);
+
+const pingUrl = process.env.PING_URL;
+const postUrl = process.env.POST_URL;
+
+async function start() {
   const request = async () => {
     console.log("发送请求", date.formatTime(date.unix()));
-    const data = await api.ping();
-    console.log("ping 的结果：", data);
-    if (!data) throw new Error("ping 没有获取到结果");
-    const user = await api.login();
-    console.log("login 的结果：", user);
-    if (!user) throw new Error("login 没有获取到结果");
+
+    if (pingUrl) {
+      const res1 = await axios.get(pingUrl);
+      console.log("ping 的结果：", res1.data);
+      if (!res1.data) throw new Error("ping 没有获取到结果");
+    }
+
+    if (postUrl) {
+      const res2 = await axios.post(postUrl);
+      console.log("post 的结果：", res2.data);
+      if (!res2.data) throw new Error("post 没有获取到结果");
+    }
   };
 
   const task = reactiveX.createRetryTask({
@@ -31,7 +42,7 @@ async function ping() {
 }
 
 const service = {
-  ping,
+  start,
 };
 
 export default service;
