@@ -40,8 +40,8 @@ jobs:
       - name: Run Work
         env:
           # PING_URL: ${{ secrets.PING_URL }}
-          PING_URL: https://manager.shirtiny.cn/api/v1/ping
-          POST_URL: https://manager.shirtiny.cn/api/v1/corn/daily
+          PING_URL: https://ren.anror.com/api/v1/ping
+          POST_URL: https://ren.anror.com/api/v1/cron/daily
         run: |
           npm i yarn
           yarn
