@@ -39,9 +39,10 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run Work
         env:
-          # PING_URL: ${{ secrets.PING_URL }}
-          PING_URL: https://ren.anror.com/api/v1/ping
-          POST_URL: https://ren.anror.com/api/v1/cron/daily
+          PING_URL: ${{ secrets.PING_URL }}
+          POST_URL: ${{ variables.POST_URL }}
+          # PING_URL: https://ren.anror.com/api/v1/ping
+          # POST_URL: https://ren.anror.com/api/v1/cron/daily
         run: |
           npm i yarn
           yarn
