@@ -40,7 +40,7 @@ jobs:
       - name: Run Work
         env:
           PING_URL: ${{ secrets.PING_URL }}
-          POST_URL: ${{ variables.POST_URL }}
+          POST_URL: ${{ vars.POST_URL }}
           # PING_URL: https://ren.anror.com/api/v1/ping
           # POST_URL: https://ren.anror.com/api/v1/cron/daily
         run: |
