@@ -16,14 +16,13 @@ const postUrl = process.env.POST_URL;
 const selfAlive = async (info) => {
   const startTime = date.formatTime(date.unix());
 
-  if (!shell.which("git")) {
-    shell.echo("self alive error: Sorry, this script requires git.");
-    return;
-  }
   try {
     await command("git status");
     await command(
-      `echo ${startTime}__${String(info).replace(/\s*/g, "")} >> ./self-alive.txt`
+      `echo ${startTime}__${String(info).replace(
+        /\s*/g,
+        ""
+      )} >> ./self-alive.txt`
     );
     await command("git add .");
     await command(`git commit -m "self alive at ${startTime}"`);
