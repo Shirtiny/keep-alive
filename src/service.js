@@ -4,7 +4,7 @@
  * @LastEditTime: 2021-11-21 19:12:15
  * @Description:
  */
-import { reactiveX, date } from "@shirtiny/utils/lib";
+import { reactiveX, date, util } from "@shirtiny/utils/lib";
 import axios from "axios";
 import { exec } from "child_process";
 
@@ -14,6 +14,8 @@ const pingUrl = process.env.PING_URL;
 const postUrl = process.env.POST_URL;
 
 const selfAlive = async (info) => {
+  console.log("selfAlive start. waiting 10 minutes....")
+  await util.sleep(600 * 1000);
   const startTime = date.formatTime(date.unix());
 
   try {
