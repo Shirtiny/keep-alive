@@ -14,8 +14,8 @@ const pingUrl = process.env.PING_URL;
 const postUrl = process.env.POST_URL;
 
 const selfAlive = async (info) => {
-  console.log("selfAlive start. waiting 10 minutes....")
-  await util.sleep(600 * 1000);
+  console.log("selfAlive start. waiting 10 second....")
+  await util.sleep(10 * 1000);
   const startTime = date.formatTime(date.unix());
 
   try {
