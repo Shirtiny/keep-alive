@@ -18,13 +18,15 @@ const selfAlive = async (info) => {
 
   try {
     await command("git status");
+    await command(`git config --global user.email "shirtiny@gmail.com"`);
+    await command(`git config --global user.name "shirtiny"`);
     await command(
       `echo ${startTime}__${String(info).replace(
         /\s*/g,
         ""
       )} >> ./self-alive.txt`
     );
-    await command("git add .");
+    await command("git add ./self-alive.txt");
     await command(`git commit -m "self alive at ${startTime}"`);
     await command("git push");
   } catch (e) {

@@ -42,6 +42,7 @@ jobs:
           # PING_URL: ${{ secrets.PING_URL }}
           PING_URL: ${{ vars.PING_URL }}
           POST_URL: ${{ vars.POST_URL }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           npm i yarn
           yarn
